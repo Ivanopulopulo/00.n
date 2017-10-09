@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename Iterator, typename T>
+
+auto find_two_elements_with_sum(Iterator first, Iterator last, T s) ->std::pair <bool, std::pair<Iterator, Iterator>>
+
+{
+
+	bool a = 0;
+
+	for (Iterator iter = first; iter != last; iter++)
+
+	{
+
+		cout << endl;
+
+		for (Iterator iter_ = last; iter_ != iter; iter_--)
+
+		{
+
+			int sum = (*iter_ + *iter);
+
+			if (sum == s)
+
+			{
+
+				a = 1;
+
+				std::pair<Iterator, Iterator> pair_(iter, iter_);
+
+				std::pair<bool, std::pair<Iterator, Iterator>> pair(bl, pair_);
+
+			}
+
+		}
+
+	}
+
+}
